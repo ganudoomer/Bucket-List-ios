@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		223DEBB6276A44B200188E79 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223DEBB5276A44B200188E79 /* Result.swift */; };
 		225EB4BE2768F86400CE9458 /* mapViewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225EB4BD2768F86400CE9458 /* mapViewApp.swift */; };
 		225EB4C02768F86400CE9458 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225EB4BF2768F86400CE9458 /* ContentView.swift */; };
 		225EB4C22768F86500CE9458 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 225EB4C12768F86500CE9458 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		223DEBB5276A44B200188E79 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		225EB4BA2768F86400CE9458 /* mapView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mapView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		225EB4BD2768F86400CE9458 /* mapViewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapViewApp.swift; sourceTree = "<group>"; };
 		225EB4BF2768F86400CE9458 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 				225EB4BD2768F86400CE9458 /* mapViewApp.swift */,
 				225EB4BF2768F86400CE9458 /* ContentView.swift */,
 				225EB4CD27690AA300CE9458 /* EditView.swift */,
+				223DEBB5276A44B200188E79 /* Result.swift */,
 				225EB4CB2768FC9600CE9458 /* Location.swift */,
 				225EB4C12768F86500CE9458 /* Assets.xcassets */,
 				225EB4C32768F86500CE9458 /* Preview Content */,
@@ -144,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				225EB4C02768F86400CE9458 /* ContentView.swift in Sources */,
+				223DEBB6276A44B200188E79 /* Result.swift in Sources */,
 				225EB4CC2768FC9600CE9458 /* Location.swift in Sources */,
 				225EB4CE27690AA300CE9458 /* EditView.swift in Sources */,
 				225EB4BE2768F86400CE9458 /* mapViewApp.swift in Sources */,
