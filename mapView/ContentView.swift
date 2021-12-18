@@ -9,14 +9,15 @@ import SwiftUI
 import MapKit
 
 struct ContentView: View {
-    @State private var mapRegion = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 50, longitude: 0), span: MKCoordinateSpan(latitudeDelta: 25, longitudeDelta: 25))
+   @StateObject private var viewModel = ViewModel()
     
-    @State private var  locations = [Location]()
-    @State private var  selecteLocation: Location?
     
     var body: some View {
+        if viewModel.isUnlocked {
+            
+       
         ZStack{
-            Map(coordinateRegion: $mapRegion,annotationItems: locations){ locaiton in
+            Map(coordinateRegion: $viewModel.mapRegion,annotationItems: viewModel.locations){ locaiton in
                 MapAnnotation(coordinate: locaiton.cooridinate){
                     VStack {
                         Image(systemName: "star.circle")
@@ -28,7 +29,7 @@ struct ContentView: View {
                             
                         Text(locaiton.name).fixedSize()
                     }.onTapGesture {
-                        selecteLocation = locaiton
+                        viewModel.selecteLocation = locaiton
                     }
                 }
                 
@@ -39,8 +40,7 @@ struct ContentView: View {
                 HStack{
                     Spacer()
                     Button {
-                        let newLocation = Location(id: UUID(), longitude: mapRegion.center.longitude, latiude: mapRegion.center.latitude, name: "New Location", description: "")
-                        locations.append(newLocation)
+                        viewModel.addLocation()
                     } label: {
                         Image(systemName: "plus")
                     }.padding()
@@ -52,12 +52,15 @@ struct ContentView: View {
                 }
         
             }
-        }.sheet(item: $selecteLocation) { place in
+        }.sheet(item: $viewModel.selecteLocation) { place in
             EditView(location: place) { location in
-             if let index = locations.firstIndex(of: place) {
-                    locations[index] = location
-                }
+                viewModel.updateLocation(location: location)
             }
+        }
+        } else {
+            Button("Unlock Places") {
+                viewModel.authenticate()
+            }.padding().background(.blue).foregroundColor(.white).clipShape(Capsule())
         }
     }
 }

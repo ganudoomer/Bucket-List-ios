@@ -14,6 +14,8 @@
 		225EB4C52768F86500CE9458 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 225EB4C42768F86500CE9458 /* Preview Assets.xcassets */; };
 		225EB4CC2768FC9600CE9458 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225EB4CB2768FC9600CE9458 /* Location.swift */; };
 		225EB4CE27690AA300CE9458 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225EB4CD27690AA300CE9458 /* EditView.swift */; };
+		229B8F9F276DE5D50017C082 /* ContentView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229B8F9E276DE5D50017C082 /* ContentView-ViewModel.swift */; };
+		229B8FA1276DEA6D0017C082 /* FileManager-DocumentsDirectory .swift in Sources */ = {isa = PBXBuildFile; fileRef = 229B8FA0276DEA6D0017C082 /* FileManager-DocumentsDirectory .swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,9 @@
 		225EB4C42768F86500CE9458 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		225EB4CB2768FC9600CE9458 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		225EB4CD27690AA300CE9458 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
+		229B8F9E276DE5D50017C082 /* ContentView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentView-ViewModel.swift"; sourceTree = "<group>"; };
+		229B8FA0276DEA6D0017C082 /* FileManager-DocumentsDirectory .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager-DocumentsDirectory .swift"; sourceTree = "<group>"; };
+		229B8FA2276DEDB10017C082 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +62,12 @@
 		225EB4BC2768F86400CE9458 /* mapView */ = {
 			isa = PBXGroup;
 			children = (
+				229B8FA2276DEDB10017C082 /* Info.plist */,
+				229B8FA0276DEA6D0017C082 /* FileManager-DocumentsDirectory .swift */,
 				225EB4BD2768F86400CE9458 /* mapViewApp.swift */,
 				225EB4BF2768F86400CE9458 /* ContentView.swift */,
 				225EB4CD27690AA300CE9458 /* EditView.swift */,
+				229B8F9E276DE5D50017C082 /* ContentView-ViewModel.swift */,
 				223DEBB5276A44B200188E79 /* Result.swift */,
 				225EB4CB2768FC9600CE9458 /* Location.swift */,
 				225EB4C12768F86500CE9458 /* Assets.xcassets */,
@@ -147,6 +155,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				225EB4C02768F86400CE9458 /* ContentView.swift in Sources */,
+				229B8F9F276DE5D50017C082 /* ContentView-ViewModel.swift in Sources */,
+				229B8FA1276DEA6D0017C082 /* FileManager-DocumentsDirectory .swift in Sources */,
 				223DEBB6276A44B200188E79 /* Result.swift in Sources */,
 				225EB4CC2768FC9600CE9458 /* Location.swift in Sources */,
 				225EB4CE27690AA300CE9458 /* EditView.swift in Sources */,
@@ -284,6 +294,8 @@
 				DEVELOPMENT_TEAM = 9WK5FXP8MA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = mapView/Info.plist;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Please authenticate yourself to unlock your places";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -313,6 +325,8 @@
 				DEVELOPMENT_TEAM = 9WK5FXP8MA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = mapView/Info.plist;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Please authenticate yourself to unlock your places";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
